@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   let graph = document.getElementById("graph")
   let passifs = document.getElementById("passifs")
   let actifs = document.getElementById("actifs")
+  let searchButton = document.getElementById("searchButton")
+
+
+  searchButton.addEventListener("click", searchChampion)
 
   await fetch(
     "http://ddragon.leagueoflegends.com/cdn/13.10.1/data/fr_FR/champion.json",
@@ -57,6 +61,44 @@ document.addEventListener("DOMContentLoaded", async function () {
       printChampion
     );
   });
+
+  function searchChampion() {
+    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    fetch(
+      "http://ddragon.leagueoflegends.com/cdn/13.10.1/data/fr_FR/champion.json",
+      "GET",
+      function () {
+        let result = JSON.parse(this.response);
+        let champions = Object.values(result.data);
+        let filteredResults;
+        if (isNaN(searchTerm)) {
+          filteredResults = champions.filter((champions) =>
+          champions.name.toLowerCase().includes(searchTerm)
+          );
+        } else {
+          filteredResults = champions.filter((champions) =>
+            champions.key.includes(searchTerm)
+          );
+        }
+        document.getElementById("jokes").textContent = "";
+        filteredResults.forEach((champion) => {
+          let li = document.createElement("li");
+          let link = document.createElement("a");
+          link.href = "#";
+          let img = document.createElement("img");
+          img.src = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`;
+          link.append(img);
+          link.innerHTML += champion.name;
+          link.addEventListener("click", function () {
+            detailChampion(champion.name);
+          });
+          li.append(link);
+          document.getElementById("jokes").append(li);
+          plus.style.display = 'none'
+        });
+      }
+    );
+  }
 
   async function detailChampion(id){
 
