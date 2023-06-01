@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/ListeChampion.css" />
+  </head>
+  <body>
     <header>
-        <img src="image/6095211c53a8bf00040ff3a4.png" alt="logo">
-        <nav>
-          <ul>
-            <li><a href="#">Liste des Champions</a></li>
-            <li><a href="">Liste des Compétences</a></li>
-            <li><a href="">Liste des objets</a></li>
-            <li><a href="">Défi Champion</a></li>
-            <li><a href="">Défi Compétence</a></li>
-            <li><a href="">Défi Objet</a></li>
-          </ul>
-        </nav>
+      <img src="image/6095211c53a8bf00040ff3a4.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Liste des Champions</a></li>
+          <li><a href="">Liste des Compétences</a></li>
+          <li><a href="">Liste des objets</a></li>
+          <li><a href="">Défi Champion</a></li>
+          <li><a href="">Défi Compétence</a></li>
+          <li><a href="">Défi Objet</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="recherche">
-            <label for="searchInput">Chercher un champion avec son nom ou sa clé</label>
-            <input type="text" id="searchInput"/>
-            <select name="types" id="types">
-                <option value="">Roles
-                </option>
-            </select>
-            <button id="searchButton">Search</button>
+      <div class="recherche">
+        <label for="searchInput"
+          >Chercher un champion avec son nom ou sa clé</label
+        >
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Entrez le Nom ou la clé"
+        />
+        <select name="types" id="types">
+          <option value="">Roles</option>
+        </select>
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="resultats">
+        <ul id="jokes"></ul>
+        <button id="plus">Plus</button>
+      </div>
+      <div id="detail">
+        <div id="splash"></div>
+        <div class="container">
+          <div id="desc"></div>
+          <div id="graphContainer">
+            <canvas id="graph"></canvas>
           </div>
-        <div class="resultats">
-            <ul id="jokes"></ul>
-            <button id="plus">Plus</button>
+          <div id="competence">
+            <h3>Actifs</h3>
+            <div id="actifs"></div>
+            <h3>Passifs</h3>
+            <div id="passifs"></div>
+          </div>
         </div>
-        <div id="detail">
-            <div id="splash"></div>
-            <div id="desc"></div>
-            <div id="graphContainer">
-                <canvas id="graph"></canvas>
-            </div>
-            <div id="competence">
-                <h3>Actifs</h3>
-                <div id="actifs"></div>
-                <h3>Passifs</h3>
-                <div id="passifs"></div>
-            </div>
-        </div>
+      </div>
     </main>
     <script defer src="librairies/chartjs.js"></script>
     <script defer src="JS/ListeChampions.js"></script>
-</body>
+  </body>
 </html>

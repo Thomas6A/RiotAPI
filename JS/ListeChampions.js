@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             suggestedMin: 0,
             suggestedMax: 10,
             pointLabels: {
-              color: "#ffcb0d",
+              color: "black",
             },
           },
         },
