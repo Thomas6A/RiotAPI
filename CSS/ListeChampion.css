@@ -8,6 +8,12 @@ body{
 	background-color: #F5F5F5;
 }
 
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+
 header{
     display: flex;
     width: 45%;
@@ -174,6 +180,6 @@ select{
 }
 
 #competence p{
-    height: 100px;
+    height: 110px;
     overflow-y:scroll;
 }
