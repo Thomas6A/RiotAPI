@@ -153,3 +153,9 @@ select{
     display: none !important;
 }
 
+#objetImage img{
+    width: 200px;
+    margin-left: 40%;
+    margin-top: 1%;
+}
+
