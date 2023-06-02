@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           } else {
             filteredResults = champions.filter(
               (champions) =>
-                champions.key.includes(searchTerm)
+                champions.key === searchTerm
             );
           }
         }else{
