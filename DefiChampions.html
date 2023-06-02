@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/DefiChampion.css" />
+  </head>
+  <body>
+    <header>
+      <img src="image/6095211c53a8bf00040ff3a4.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="ListeChampions.html">Liste des Champions</a></li>
+          <li><a href="">Liste des Compétences</a></li>
+          <li><a href="ListeObjets.html">Liste des objets</a></li>
+          <li><a href="#">Défi Champion</a></li>
+          <li><a href="">Défi Compétence</a></li>
+          <li><a href="DefiObjets.html">Défi Objet</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="recherche">
+        <label for="searchInput"
+          >Entrez la Réponse</label
+        >
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Entrez le Nom"
+        />
+        <button id="searchButton">Submit</button>
+      </div>
+      <div id="resultats">
+        <p>Votre réponse est :</p>
+      </div>
+      <div class="timer">
+        <p id="reste">Il vous reste :</p>
+      </div>
+      <div class="score">
+        <p id="score">Votre score est de : </p>
+      </div>
+      <button id="start">start</button>
+      <div id="detail">
+        <div id="splash"></div>
+        <div id="indice1" class="cache">
+        </div>
+        <div id="indice2" class="cache">
+        </div>
+        <div id="indice3" class="cache">
+        </div>
+      </div>
+    </main>
+    <script defer src="JS/DefiChampion.js"></script>
+  </body>
+</html>

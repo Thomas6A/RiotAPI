@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/ListeChampion.css" />
+  </head>
+  <body>
+    <header>
+      <img src="image/6095211c53a8bf00040ff3a4.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="ListeChampions.html">Liste des Champions</a></li>
+          <li><a href="">Liste des Compétences</a></li>
+          <li><a href="#">Liste des objets</a></li>
+          <li><a href="DefiChampions.html">Défi Champion</a></li>
+          <li><a href="">Défi Compétence</a></li>
+          <li><a href="DefiObjets.html">Défi Objet</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="recherche">
+        <label for="searchInput"
+          >Chercher un objet</label
+        >
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Entrez le Nom"
+        />
+        <select name="types" id="types">
+          <option value="">Roles</option>
+        </select>
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="resultats">
+        <ul id="jokes"></ul>
+        <button id="plus">Plus</button>
+      </div>
+      <div id="detail">
+        <div class="container">
+          <div id="imageObjet"></div>
+          <div id="desc"></div>
+        </div>
+      </div>
+    </main>
+    <script defer src="JS/ListeObjets.js"></script>
+  </body>
+</html>
