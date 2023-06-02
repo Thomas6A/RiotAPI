@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/DefiChampion.css" />
+    <link rel="stylesheet" href="CSS/ListeChampion.css" />
   </head>
   <body>
     <header>
@@ -14,8 +14,8 @@
         <ul>
           <li><a href="ListeChampions.html">Liste des Champions</a></li>
           <li><a href="">Liste des Compétences</a></li>
-          <li><a href="ListeObjets.html">Liste des objets</a></li>
-          <li><a href="#">Défi Champion</a></li>
+          <li><a href="#">Liste des objets</a></li>
+          <li><a href="DefiChampions.html">Défi Champion</a></li>
           <li><a href="">Défi Compétence</a></li>
           <li><a href="">Défi Objet</a></li>
         </ul>
@@ -24,35 +24,30 @@
     <main>
       <div class="recherche">
         <label for="searchInput"
-          >Entrez la Réponse</label
+          >Chercher un objet</label
         >
         <input
           type="text"
           id="searchInput"
           placeholder="Entrez le Nom"
         />
-        <button id="searchButton">Submit</button>
+        <select name="types" id="types">
+          <option value="">Roles</option>
+        </select>
+        <button id="searchButton">Search</button>
       </div>
-      <div id="resultats">
-        <p>Votre réponse est :</p>
+      <div class="resultats">
+        <ul id="jokes"></ul>
+        <button id="plus">Plus</button>
       </div>
-      <div class="timer">
-        <p id="reste">Il vous reste :</p>
-      </div>
-      <div class="score">
-        <p id="score">Votre score est de : </p>
-      </div>
-      <button id="start">start</button>
       <div id="detail">
-        <div id="splash"></div>
-        <div id="indice1" class="cache">
-        </div>
-        <div id="indice2" class="cache">
-        </div>
-        <div id="indice3" class="cache">
+        <div class="container">
+          <div id="imageObjet"></div>
+          <div id="desc"></div>
         </div>
       </div>
     </main>
-    <script defer src="JS/DefiChampion.js"></script>
+    <script defer src="librairies/chartjs.js"></script>
+    <script defer src="JS/ListeObjets.js"></script>
   </body>
 </html>
